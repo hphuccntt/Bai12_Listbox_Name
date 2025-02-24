@@ -64,6 +64,7 @@ namespace Bai12_Listbox_Name
 
         private void btnInSert_Click(object sender, EventArgs e)
         {
+            // lstName.Items.Insert ( convert.ToInt32(txtIndext.text), txtName.Text);
             if ( lstName.SelectedIndex >= 0)
             {
                 lstName.Items.Insert(lstName.SelectedIndex, txtName.Text);
