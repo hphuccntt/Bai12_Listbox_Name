@@ -56,7 +56,7 @@ namespace Bai12_Listbox_Name
 
         private void btnRemove_Click(object sender, EventArgs e)
         {
-            if (lstName.SelectedIndex < 0) ;
+            if (lstName.SelectedIndex >= 0) ;
             {
                 lstName.Items.RemoveAt (lstName.SelectedIndex);
             }
@@ -64,7 +64,11 @@ namespace Bai12_Listbox_Name
 
         private void btnInSert_Click(object sender, EventArgs e)
         {
-            lstName.Items.Insert(Convert.ToInt32(txtIndext.Text), txtName.Text);
+            if ( lstName.SelectedIndex >= 0)
+            {
+                lstName.Items.Insert(lstName.SelectedIndex, txtName.Text);
+            }
+            
         }
     }
 }
